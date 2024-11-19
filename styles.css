@@ -1,0 +1,147 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header, footer {
+    background: #f8b400;
+    padding: 10px;
+    text-align: center;
+}
+
+header {
+    flex: 0 1 auto;
+}
+
+footer {
+    flex: 0 1 auto;
+}
+
+main {
+    display: flex;
+    flex: 1 1 auto;
+    padding: 10px;
+}
+
+aside {
+    flex: 0 0 200px;
+    background: #f0f0f0;
+    padding: 10px;
+}
+
+article {
+    flex: 1 1 auto;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: square;
+    padding-left: 10px;
+}
+
+nav ul li {
+    margin: 5px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.flip-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 350px;
+    height: 350px;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.flip-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.flip-card-back {
+    background-color: #f8b400;
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.tips {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tip {
+    background: #f0f0f0;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tip h2 {
+    margin-top: 0;
+}
+
+.quick-tips, .resources {
+    margin-top: 20px;
+}
+
+.quick-tips h2, .resources h2 {
+    margin-top: 0;
+}
+
+.quick-tips ul, .resources ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.quick-tips ul li, .resources ul li {
+    margin: 5px 0;
+}
+section.tips {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
